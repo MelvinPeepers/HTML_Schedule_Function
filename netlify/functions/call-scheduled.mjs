@@ -6,5 +6,10 @@ export default async function handler(req) {
   }
   
   export const config = {
-    schedule: "@daily" // Runs once a day
+    schedule: [
+      "0 0 * * *",   // 00:00 UTC
+      "0 6 * * *",   // 06:00 UTC
+      "0 12 * * *",  // 12:00 UTC
+      "0 18 * * *"   // 18:00 UTC
+    ]
   };
