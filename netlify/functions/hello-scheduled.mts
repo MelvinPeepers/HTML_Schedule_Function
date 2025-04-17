@@ -10,4 +10,4 @@ export default async function handler(req: Request): Promise<Response> {
 // Run every hour
 export const config: Config = {
   schedule: "@hourly"
-}
+};

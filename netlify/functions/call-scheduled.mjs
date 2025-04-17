@@ -1,3 +1,5 @@
+import type ( Config ) from "@netlify/functions"
+
 export default async function handler(req) {
     // Call my wife
     console.log("Calling wife... 💖");
