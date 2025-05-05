@@ -30,7 +30,7 @@
 // netlify/functions/ph-scheduled.mts
 import type { Config } from "@netlify/functions";
 
-export async function handler(): Promise<Response> {
+export default async function handler(): Promise<Response> {
   console.log("ph-scheduled function triggered");
   return new Response("OK");
 }
