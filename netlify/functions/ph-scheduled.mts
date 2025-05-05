@@ -25,9 +25,8 @@
 
 
 
-// ph-scheduled.mjs
-
-// background-task.mts
+// ph-scheduled.mts
+import type { Config } from "@netlify/functions";
 
 // This is the main function Netlify will invoke on schedule.
 // It must be exported as a named function called `handler`.
@@ -50,6 +49,6 @@ export async function handler(): Promise<Response> {
 // This `config` export tells Netlify how to schedule the function.
 // The `@hourly` cron string means the function will run once every hour.
 // You can customize this using cron syntax (e.g., "0 8 * * *" for 8AM daily).
-export const config = {
+export const config: Config = {
   schedule: "@hourly" // Runs the function automatically every hour
 };
