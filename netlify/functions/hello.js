@@ -1,4 +1,9 @@
 exports.handler = async (event, context) => {
+    console.log("Function execution");
+    console.log("Function started");
+    await new Promise ((resolve) => setTimeout(resolve, 500)); // 500ms delay
+    console.log("Function completed");
+    console.log("Function execution");
   return {
     statusCode: 200,
     body: JSON.stringify({
