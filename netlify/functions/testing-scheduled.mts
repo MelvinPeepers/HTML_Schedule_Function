@@ -12,7 +12,7 @@ export default async () => {
         method: 'POST',
         headers: {
           'x-admin-key': ADMIN_API_KEY,
-          'Content-Type: 'application/json'
+          'Content-Type': 'application/json'
         },
         body : JSON.stringify({ test: true })
       }
