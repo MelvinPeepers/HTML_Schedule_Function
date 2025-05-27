@@ -7,12 +7,14 @@ export default async () => {
   console.log('Running trait-rolls', NEXT_APP_API_DOMAIN);
   try {
     const response = await fetch(
-      `${NEXT_APP_API_DOMAIN}/api/admin/jobs/trait-rolls`,
+      `${NEXT_APP_API_DOMAIN}/post`,
       {
         method: 'POST',
         headers: {
           'x-admin-key': ADMIN_API_KEY,
+          'Content-Type: 'application/json'
         },
+        body : JSON.stringify({ test: true })
       }
     );
 
